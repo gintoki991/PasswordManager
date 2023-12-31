@@ -1,6 +1,7 @@
 FROM ubuntu:23.10
 
-COPY PasswordManager /usr/local/bin
-RUN chmod +x /usr/local/bin/PasswordManager
+COPY password_manager.sh /usr/local/bin
+RUN chmod +x /usr/local/bin/password_manager.sh
+VOLUME [ "/data" ]
 
-CMD ["PasswordManager"]
+CMD ["password_manager.sh"]
