@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sh:
+    build: .
+    volumes:
+      - data:/sh/data
+volumes:
+  data:
